@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)file:///C:/Users/User/Desktop/blog.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="../css/style.css"> 
+
+<style>
+    /* margin and padding 0 for whole page */
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    html {
+        scroll-behavior:smooth;
+    }
+    /* make the body full screen */
+    body {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        font-family: sans-serif, monospace;
+       
+    }
+    /* title for blogs */
+    .title {
+        margin: 10px;
+        color: grey;
+        font-size: 18px;
+    }
+    .card h1 {
+        margin: 10px;
+    }
+
+    p button:hover{
+        opacity: 0.7;
+    }
+    .animated-text {
+        padding: 5px;
+    }
+    /* main page of the blog */
+    .first-container {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height:800px;
+        width: inherit;
+        position: relative;
+        background-image: url("../images/sasha.png");  
+        scroll-behavior: smooth;
+        background-size: cover;
+    }
+    /* items for the main page */
+    .first-container-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -15%;
+    }
+    /* defining styles for the cards at the bottom */
+    .row {
+        display: flex;   
+        justify-content: flex-end;
+        position: relative;
+        margin-left: 50px;
+        flex-wrap:wrap;
+    }
+    /* Float three columns side by side */
+    .column {
+        width: 25%;
+        height: 80%;
+        margin: 20px 0px;
+    }
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    /* Style the counter cards */
+    .card {
+        max-width: 85%;
+        /* max-height:100%; */
+        border-radius: 8px 8px 5px 5px;
+        padding: 0px 0px 16px 0px;
+        font-family:'Open Sans', Tahoma, Verdana, sans-serif; 
+        box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        color: white;
+        background-color: #e6e6dd5d;
+        transition: 0.5s;
+    }
+    /* on card hover */
+    .column .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+    }
+    .card a {
+        text-decoration: none;
+    }
+    .card h2 {
+        border-bottom: 1px sold rgb(22, 22, 22);
+        /* padding-bottom: 3px; */
+        color: rgb(32, 31, 31);
+    }
+    .card p {
+        color: rgb(51, 48, 48);
+    }
+    .card h2, .card p {
+        margin: 10px 10px 0px 20px;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 8px 8px 0px 0px;
+    }
+    /* animated arrow button */
+    .arrow-button {
+        color: black;
+        float: right;
+        margin: -15px;
+        padding: 0px;
+        all: 0;
+    }
+    /* blog section */
+    .blogs-container {
+        display: flex;
+        scroll-behavior: smooth ;
+        flex-direction: row;
+    }
+    /* div for table of contents */
+    .navigation-div {
+        line-height: 1.2;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-basis: 120%;
+        padding: 0px 10px 10px 50px;
+
+    }
+    .blogs-div {
+        display: flex;
+        line-height: 1.5;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog-content {
+        margin: 0px 50px 0px 50px;
+    }
+    .navigation-div a {
+        color: black;
+        text-decoration: none;
+    }
+    .table-of-contents {
+        background-color: #6e8efb;
+    }
+    .table-of-contents li{
+        list-style-type:none;
+        font-size: 20px;
+        color:#ffffff;
+        line-height: 2;
+        position: relative;
+        right: 149px;
+    }
+    .table-of-contents li:hover {
+        background-color:#5378f0;
+        opacity: 0.9;
+    }
+    .content-title {
+        position: relative;
+        font-family: 'Open Sans';
+        line-height: 1.5;
+        letter-spacing: 2px;
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+    }
+    
+    .blog-content p {
+        text-align: justify;
+        margin:10px 0px;
+        font-size: 16px;
+        word-spacing: 2px;
+        line-height: 1.8;
+        font-family:'Open Sans';
+    }
+    .blogs-div .content-title {
+        font-size: 30px;
+    }
+    .blogs-div .content-subtitle {
+        font-size:25px;
+        text-decoration: underline;
+    }
+    .content-subtitle, .content-sub-subtitle {
+        font-family: Poppins-Regular;
+        color: rgb(0, 0, 0);
+        margin: 15px 0px;
+        font-size:20px;
+    }
+    .blog-image {
+        width: 70%;
+        height: 500px;
+        margin-top: 20px;
+    }
+    .profile-card {
+        display: flex;
+        height: 500px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .profile-card .profile-pic {
+        width: 120px;
+        position: relative;
+        margin-top: -60px;
+        border-radius: 50%;
+    }
+    .profile-card-contents {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: #6e8efb;
+        position: relative;
+        padding: 15px;
+        box-sizing: border-box;
+        width: 320px;
+        font-size: 16px;
+        align-items: center;
+        font-family:'Open Sans',Poppins-Regular;
+        flex-direction: column;
+        top: 80px;
+        color: rgb(138, 127, 127);
+        background-color: rgb(255, 255, 255);
+    }
+    .profile-card-contents .count-div {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .profile-card-contents .card-number {
+        color:rgb(96, 192, 230);
+        font-weight:bold;
+        font-size:20px;
+        text-align: center;
+    }
+    .profile-card-contents .social-iconss img{
+        margin: 15px;
+        opacity: 0.2;
+        width: 20px;
+        height: 20px;
+    }
+    .profile-card-contents .social-iconss img:hover {
+        opacity: 0.5;
+    }
+    .profile-card-contents .profile-button {
+        margin: 35px 0px 20px -10px;
+    }
+    .profile-card-contents .profile-button a, .subscribe-button {
+        margin-left: 16px;
+        padding: 15px 35px;
+        text-decoration: none;
+        color: white;
+        border-radius: 4px;
+        background: linear-gradient(135deg, #fb6e6e, #8777e3);
+    }
+    .profile-button a:hover {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    }
+    
+</style>
+</head>
+
+<body>
+                                        <!--------------Navigation bar---------------------->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/bonsai.png" width="200px">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav> 
+            <img src="../images/cart.png" alt="logo of cart" width="30px" height="30px" style="position: relative; right:
+            25px; bottom: 4px;">
+        </div>
+
+                                       <!-------------------Content -------------------->
+    <div class="main-container">
+        
+        <div class="first-container" >
+            <div class="first-container-items">
+                <span style="text-shadow:  1px 2px 3px rgba(88, 83, 83, 0.13);font-size:80px;color:rgb(81, 199, 27);font-family:Poppins-Bold">The World of Technology</span>
+                <span style="padding:5px;margin-top:20px;font-size:17px;width: 100%;text-align:center;background-color:rgb(0, 0, 0);mix-blend-mode: multiply;color: rgb(203, 33, 33);letter-spacing: 2.5px;font-family:Open Sans;">
+                    Technology Alone Is Not Enough .</span>
+                    <span style="padding:5px;text-align:center;background-color:rgb(15, 13, 13);mix-blend-mode: multiply;color: rgb(95, 56, 200);letter-spacing: 2.5px;">-Steve Jobs</span>
+                <div id="blog-introduction" style="position:absolute;bottom:30px;"></div>
+                <div>
+                    <section id="section02" class="demo">
+                        <a href="#blog-introduction"><span></span></a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blank-container0"></div>
+    <div class="blogs-container" id="container">
+        <div class="navigation-div">
+            <div id="blank-container1" style="height:60px"></div>
+            <div class="table-of-contents">
+                <div class="content-title" style="background-color:#663ba5;padding: 5px;">TABLE OF CONTENTS</div>
+                <nav>
+                    <ul>
+                        <a href="#blog-introduction"><li>Introduction</li>
+                        </a><a href="#blog-impacts"><li>Impacts of Technology</li></a>
+                        <a href="#blog-trends"><li>Technology Trends</li></a>
+                        <a href="#blank-container3"><li>Conclusion</li></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="profile-card">
+                
+            </div>
+        </div>
+        <div></div>
+        <div class="blogs-div">
+            <div class="blog-content default">
+                <div id="blank-container1" style="height:50px"></div>
+                <div class="content-title">Introduction</div>
+                <div>
+                    <p>Technology has revolutionized our lives in countless ways. From the invention of the printing press to the emergence of the internet, technology has had a major impact on how we interact with the world around us. In this blog post, we'll explore the impact of technology on our lives and its implications for the future. We’ll look at how technology has changed the way we work, live, and play, and how it has opened up new possibilities for communication, education, and entertainment. Technology has both positive and negative aspect in life.</p>
+                </div>
+            </div>
+            <div class="blog-content" id="blog-impacts">
+                <div id="blank-container1" style="height:60px"></div>
+                <div class="content-title">Impacts of Technology</div>
+                <div>
+                    <p>
+                        Technology has infiltrated our lives in ways that we never imagined before. From smartphones, to tablets and even self-driving cars, the advances in technology have made our lives easier and more efficient. But, along with all of the convenience, technology also has its impacts on our lives.
+                    </p>
+                    <p>
+                        Technology has had both positive and negative impacts on our lives. On one hand, it can lead to greater efficiency and better communication; on the other hand, it can lead to a decline in social interaction and increased stress levels. In this blog post, we'll explore the various types of technology, their positive and negative impacts on our lives, and how we can use technology responsibly.
+                    </p>
+                    <p>
+                        Technology has become an integral part of modern life and countless types of technology make our lives easier and more efficient. Some of the most common types of technology include cell phones, computers, the internet, robots, artificial intelligence, and wearables. Each of these technologies has different uses and different impacts on our lives
+                    </p>
+                </div>
+                <div class="content-subtitle">Negative Impact</div>
+                
+                <div>
+                    <p>
+                        Technology has revolutionized the way we live, and its impact on our lives is undeniable. While there are numerous benefits to modern technology, it also brings with it a range of negative effects. 
+                        One of the biggest issues with technology is the way it can disconnect us from the world. Technology can make us more isolated, as we may spend large amounts of time on our phones or laptops instead of interacting with people. It can also lead to physical isolation, as people rely on technology to do tasks such as shopping, banking, and work that can be done without ever leaving their home. This lack of human contact can have a negative effect on mental health.
+                        In addition, technology has made us increasingly dependent on machines. Weve come to rely on technology to do tasks that we would normally do ourselves, such as looking up information or even cooking meals. This dependence on technology can lead to inefficiencies and a lack of autonomy. 
+                        Technology also has a dark side in terms of cyber-crime. Cyber-crime is a growing problem, with hackers using technology to steal information or money from individuals and businesses alike. This form of crime has become more common in recent years and has the potential to cause serious harm. 
+                        Finally, technology can be distracting and can make it difficult for people to concentrate on tasks that require focus and dedication. As a result, people often find themselves overwhelmed by the number of distractions available online. 
+                        Overall, technology can be both beneficial and detrimental to our lives. While it has many positive uses, it’s important to be aware of its potential negative impacts
+                        . </p>
+                    
+                </div>
+                
+                <div class="content-subtitle">Positive Impacts</div>
+                <div class="content-sub-subtitle">1.&nbsp;&nbsp;Increased Population</div>
+                <p>Technology has been a major force in transforming our lives for the better. It has allowed us to do things faster, easier, and with much more efficiency than ever before. It has also opened up a world of possibilities for communication, commerce, entertainment, education, and more.
+                    From its humble beginnings as the steam engine to the modern-day computer and internet, technology has come a long way and had a positive impact on our lives. For example, computers have enabled us to become more productive in our everyday tasks. We are now able to communicate with people around the globe instantly, conduct business transactions more efficiently, and access vast amounts of information with just a few clicks of the mouse.
+                    In addition to improved productivity, technology has also enabled us to stay connected with family and friends through social media platforms like Facebook, Twitter, and Instagram. We can share photos, videos, and other content quickly and easily. Moreover, technology has made learning accessible to anyone with an internet connection. With the help of websites such as Khan Academy, Coursera, and Udemy, individuals from all walks of life can learn new skills and gain knowledge at their own pace.
+                    Finally, technology has made healthcare more accessible than ever before. Through telemedicine and virtual visits, people can now get medical advice and treatment without leaving their homes. Furthermore, technologies like artificial intelligence (AI) and robotics are being used to diagnose diseases quickly and accurately.
+                    In short, technology has had a profound impact on our lives. From improved productivity and communication to online learning and healthcare, technology is shaping our lives in many positive ways.
+                    
+            </p></div>
+            <div class="blog-content" id="blog-trends">
+                <div id="blank-container2" style="height:60px"></div>
+                <div class="content-title">Technology Trends</div>
+                <p>Technology is advancing at a rapid rate and its effects are felt in virtually every aspect of our lives. From smartphones to voice assistants, from computers to IoT devices, technology is making its presence felt in our daily lives. 
+                    In this section, we'll discuss some of the key trends that are shaping the way we interact with technology and how it affects our lives.
+                    </p>
+                <div class="content-sub-subtitle">
+                        1.Smartphones:
+                </div>
+                <p>Smartphones have become the go-to device for most people, as they provide a convenient way to access the web, stay connected to others, and run a variety of applications. Smartphone technology continues to evolve, with more powerful hardware, faster processors, and improved battery life leading the way.</p>
+                <div class="content-sub-subtitle">
+                        2.Voive assistants: 
+                </div>
+                <p>
+                    Voice assistants such as Alexa, Google Home, and Siri are becoming increasingly popular. These assistants allow users to control their home environment by voice commands and can also provide useful information such as news, weather updates, and more. 
+                </p>
+                <div class="content-sub-subtitle">
+                    3.Internet of Things (IoT):
+                </div>
+                <p>
+                    The Internet of Things (IoT) has been around for several years now, but is rapidly gaining traction. This technology allows for the connection of everyday objects and appliances such as refrigerators, thermostats, and security cameras to the internet, allowing them to be monitored and controlled remotely
+                </p>
+                <div class="content-sub-subtitle">
+                    4.Artificial Intelligence:
+                </div>
+                <p>
+                    Artificial intelligence (AI) is one of the most exciting developments in technology. AI can help automate mundane tasks, improve decision-making, and even help us better understand the world around us. AI has already had an impact on our lives in areas such as healthcare, finance, and transportation.
+                </p>
+                <div class="content-sub-subtitle">
+                    5.Augmented Reality(AR):
+                </div>
+                <p>
+                    Augmented Reality (AR) is a relatively new technology that combines real-world elements with computer-generated ones. This technology can be used for educational or entertainment purposes, or to enhance one's view of the world. AR is being used in a variety of ways, such as giving virtual tours of museums or cities and providing immersive gaming experiences. 
+                </p>
+            </div>
+            <div class="blog-content" id="blog-conclusion">
+                <div id="blank-container3" style="height:60px"></div>
+                <div class="content-title">Conclusion</div>
+                <p>In conclusion, technology has had a profound impact on our lives. It has changed how we communicate, how we work, and how we live our daily lives. It has opened up opportunities to access information, engage in new forms of entertainment, and even enhance our physical health. Despite its many positive impacts, technology also has its downsides. It can be addictive and a source of distraction, it can cause us to be less present at the moment, and it can be used as a tool to spread misinformation and manipulate public opinion.
+                </p>
+                <p>
+                    At the end of the day, technology is here to stay and we need to use it in a responsible way that can benefit our lives and the lives of those around us. As technology continues to evolve, it’s important to keep up with the latest trends and find ways to maximize its potential while minimizing its risks.
+                </p>
+                <p><u>Find out about more technology trends and affairs from the references below.</u></p>
+            </div>
+        </div>
+    </div>
+    <a href="#blog-introduction"><img src="file:///C:/Users/User/Desktop/Blog/Icons/go-to-top.png" id="floating-button" alt=""></a>
+    <div id="cards-container">
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <a href="https://en.wikipedia.org/wiki/Smartwatch" target="_blank">
+                        <img src="../images/iwatch.png"> 
+                        <h2>Smartwatches</h2>
+                    </a>
+                    <p>A smartwatch is a wearable computer in the form of a watch; modern smartwatches provide a local touchscreen interface for daily use, while an associated smartphone app provides management and telemetry, such as long-term biomonitoring. While early models could perform basic tasks, such as calculations, digital time telling, translations, and game-playing,smartwatches released since 2015 have more general functionality closer to smartphones, including mobile apps, a mobile operating system and WiFi/Bluetooth connectivity.</p>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <a href="https://www.intel.com/content/www/us/en/cloud-computing/what-is-cloud-computing.html" target="_blank">
+                        <img src="../images/cloud.png">
+                        <h2>Cloud Technology</h2>
+                    </a>
+                    <p>Cloud technology is growing rapidly. From hosting websites online to developing artificial intelligence, cloud technology is used everywhere. From the traditional hosting technologies, cloud hosting/cloud computing is significantly different due to its extreme flexibility and expandable features. </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div>
+                        <a href="https://en.wikipedia.org/wiki/Self-driving_car" target="_blank">
+                            <img src="../images/tesla.png">
+                            <h2>Self-Driving Cars</h2>
+                        </a>
+                        <p>A self-driving car, also known as an autonomous car, driver-less car, or robotic car, is a car that is capable of traveling without human input. Self-driving cars use sensors to perceive their surroundings, such as optical and thermographic cameras, radar, lidar, ultrasound/sonar, GPS, odometry and inertial measurement units.</p>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <a href="https://en.wikipedia.org/wiki/Virtual_reality" target="_blank">
+                        <img src="../images/vr.png">
+                        <h2>Virtual Reality</h2>
+                    </a>
+                    <p>Virtual reality is a simulated experience that employs pose tracking and 3D near-eye displays to give the user an immersive feel of a virtual world. Applications of virtual reality include entertainment, education and business..</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <a href="https://chat.openai.com/chat" target="_blank">
+                        <img src="../images/openai.png">
+                        <h2>OpenAI</h2>
+                    </a>
+                    <p>OpenAI is a research organization that aims to build and promote friendly AI in a way that benefits humanity as a whole. They develop and share advanced AI technologies and conduct research to ensure that AI is safe and beneficial for all. Their work includes developing cutting-edge AI models, such as GPT-3, and creating tools and resources to make it easier for developers and researchers to work with AI.</p>
+                </div>
+                <div>
+                    <a class="arrow-button" style="margin: 15px 25px 0px 0px;" href="https://www.forbes.com/sites/bernardmarr/2022/09/26/the-5-biggest-technology-trends-in-2023-everyone-must-get-ready-for-now/?sh=1574c93955d9" target="_blank"><span>See more</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                  <!---------------- Footer Section-------------------------->
+    <div class="footer">
+        <div class="columnn">
+            <div id = "icondiv">
+            </div> 
+            <div class="footer-title">Connect with US</div>
+            <div>
+                <a href="https://www.facebook.com/sashank.acharya.98/" title="Facebook"><img src="../icons/fb.png" alt="Facebook logo"></a>
+                <a href="https://www.instagram.com/_iamsashank/" title="Instagram"><img src="../icons/instagram.png" alt="Instagram logo"></a>
+                <a href="https://twitter.com/Immortal_jod"  title="Twitter"><img src="../icons/twitter.png" alt="Twitter logo"></a>
+                <a href="https://www.linkedin.com/in/mr-acharya-1a5449264/"  title="Linkedin"><img src="../icons/linkedin.png" alt="Linkedin logo"></a>
+            </div>
+        </div>
+        <hr style="margin-left:110px;margin-top: -20px;height: 180px;">
+        <div style="margin-left:100px;align-items: center;text-align: center;margin-top: -30px;">
+                <form id = "subscribe" action="">
+                    <img src="../icons/subscribe.png" style="width:60px;height:60px" alt="Newsletter" title="Subscribe to newsletter">
+                    <p style="padding:10px">Know about our future products and availability</p>
+                    <input type="email" placeholder="Enter your email" id = "email" required>
+                    <button style="cursor:pointer" onclick="return subscribed()">SUBSCRIBE</button>
+                </form>
+        </div>
+        <hr style="margin-left:100px;margin-top: -20px;height: 180px;";>
+        <div style="height:150px;display:flex;flex-direction:column ;margin-left: 50px;justify-content: space-between">
+                <div style="display:flex;flex-direction: row;">
+                    <img src="../icons/map.png" style="height:75%;margin-top: 5px;" alt="map">
+                    <div>
+                        Boudha <br>
+                        Kathmandu, Nepal <br>
+                    </div>
+                </div>
+                <div style="display:flex;flex-direction: row">
+                    <img src="../icons/phone-black.png" alt="Phone">
+                    <div style="margin-top:5px">
+                        (+977)9841511720
+                    </div>
+                </div>
+                <div style="display:flex;flex-direction: row;justify-content: center">
+                    <img src="../icons/email.png" alt="Mail">
+                    <div style="margin-top:5px">
+                            cool.sashank51@gmail.com
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div align="center" style="padding:0px 0px 10px 0px;font-size: 15px;font-family: Poppins-Regular;box-sizing:border-box;background:url(../background-images/white.png)">
+        Copyright &copy Bonsai Boutique 2022.  All rights reserved
+</div>
+    
+           
+                                      <!-- Using java script-->
+    <script>
+    setInterval(slider, 3000);
+    var images = [ '../C:\Users\User\Desktop\Blog\blog\R.png', '../background-images/robo.jpg', '../background-images/newnew.jpg'];
+    var i = 0;
+    function slider() { 
+        if (i < images.length) {
+            i = i + 1;
+        } else {
+            i = 1;
+        }
+        document.getElementById('first-container').style.backgroundImage = "url('"+images[i-1]+"')";
+    }
+</script>
+<Script src="../java/javas.js"></Script>
+
+
+</body></html>

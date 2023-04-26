@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta
+      name="author"
+      content="Anubhav Ratna Dhakal, Pradipta Bahadur Karki, Sashank Acharya, Subin Kamarchya, Aryan Gyawali"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <!-- Define keywords for search engines-->
+    <meta http-equiv="refresh" content="30" />
+    <!-- Refresh document every 30 seconds-->
+    <title>Bonsai Boutique | Ecommerce Website</title>
+    <!-- Using External CSS -->
+   <link rel="stylesheet" href="../css/style.css"> 
+
+    <style>
+        /*Using Internal CSS*/
+          small{
+            color :#555
+        }
+   /* font family for entire body*/     
+body{
+    font-family: sans-serif, monospace;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    height: 700px;
+}
+.topic{
+   position: relative;
+   left: 150px;
+   height: 400px;
+   width: 400px;
+
+    
+}
+.Heading{
+   position: relative;
+    top: 20px;
+}
+.Heading-picture{
+   width: 100%;
+   padding: 50px 0;
+}
+
+.Heading h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.Heading-picture{
+    max-width: 100%;
+    padding: 50px 0;
+}
+/*View Product button*/
+.btn{
+    display: inline-block;
+    background: #00fb00;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+/*To change button color while hovering*/
+.btn:hover{
+    background: #563434;
+}
+.column{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.column img{
+    width: 40%;
+    height: fit-content;
+}
+
+/*Featured Product Title*/
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    margin-top: 80px;
+    color: #555;
+
+
+    /*Featured Product and Latest Product */
+}
+.product:hover{
+    transform: translateY(-10px);
+}
+/*Offer Section*/
+.offer-section{
+    
+    margin-top: 108px;
+}
+.offer .offer-image{
+    padding: 20px;
+}
+/*offer product button*/
+.btn1{
+    display: inline-block;
+    background: #00fb00;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+    .btn1:hover{
+        background: #563434;
+}
+/*Blog*/ 
+.Blog{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+
+}.Blogbonsai{
+    display: flex;
+}
+.bg{
+    width: 320px;
+    text-align: center;
+    position: relative;
+    left: 150px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    border: 13px solid #f5f5f5;
+    top: 160px;
+}.bg img{
+    width: 170px;
+}
+.bg:hover{
+    transform: translateY(-10px);
+}
+.bg h2{
+    font-size: 20px;
+    padding: 10px;
+    font-style: Arial, sans-serif;
+}
+.bg p{
+    font-size: 15px;
+    padding: 10px;
+    font-style: Arial, sans-serif;
+}
+.blog2{
+    width: 350px;
+    text-align: center;
+    position: relative;
+    bottom: 320px;
+    left: 600px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    border: 31px solid #f5f5f5;
+}
+.blog2:hover{
+    transform: translateY(-10px);
+}
+.blog2 img{
+    width: 250px;
+}
+.blog2 h2{
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    padding: 10px;
+    font-style: italic;
+}
+.blog2 p{
+    position: relative;
+    top: 40px;
+    font-size: 15px;
+    padding: 10px;
+    font-style: Arial, sans-serif;
+}
+.blog3{
+    width: 320px;
+    text-align: center;
+    position: relative;
+    bottom: 320px;
+    left: 750px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    border: 31px solid #f5f5f5;
+    
+    
+}
+.blog3:hover{
+    transform: translateY(-10px);
+}
+.blog3 img{
+    width: 250px;
+}
+.blog3 h2{
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    padding: 10px;
+    font-style: italic;
+}
+.blog3 p{
+    position: relative;
+    top: 40px;
+    font-size: 15px;
+    padding: 10px;
+    font-style: Arial, sans-serif;
+    
+}
+.Blogsec{
+    display: flex;
+}
+.blogbtn1{
+    display: inline-block;
+    background: #00fb00;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    position: relative;
+    left: 715px;
+    bottom: 220px;
+}
+.blogbtn1:hover{
+    background: #563434;
+}
+
+
+ 
+    </style>
+   
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/bonsai.png" width="200px">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav> 
+            <img src="../images/cart.png" alt="logo of cart" width="30px" height="30px" style="position: relative; right:
+            25px; bottom: 4px;">
+        </div>
+    <!-- Introduction to page with Typewriter -->
+        <div class="topic">
+            <div class="Heading">
+                <div class="typewriterhome" style="height:200px;"><h1>We Ship Bonsai to your <br><span  id ="typewriter" style="color: green;"></span>  </h1></div>
+                <div>
+                    <p>No Matter the Time of Year,There's a Bonsai Beauty.<br> That's Ready to Brighten up Your Day.</p>
+                </div>
+                <!--&#8594 is a html icon code for arrow-->
+                <a href="product.html" class="btn">View Products &#8594</a>
+            </div>
+        </div>
+        <div class="slider" style="width: 350px; height :350px; position:relative; left: 60%; bottom: 400px; ">
+            <div id="img" style="width: 350px; height :350px">
+                <img src="../images/slider4.png" alt="bonsai">
+            </div>
+        </div>
+    </div>
+    
+
+
+
+                  <!-------------------Featured Products---------------------------------> 
+                  <section>
+                    <h2 class="title"> Featured Products</h2>
+                    <table width="100%">
+                        <tr>
+                            <th class="product">
+                                <section>
+                                        <img src="../images/bonsai1.png" alt="Buxus Bonsai" width="300px" height="300px">
+                                        <h4>Buxus Bonsai</h4>
+                                        <p><del>NPR 700</del></p>
+                                        <p><span style="color: red;">NPR 660</span></p>
+                                </section>
+                            </th>
+                            <th class="product">
+                                <section>
+                                    <img src="../images/bonsai2.png" alt="Ficus Bonsai" width="300px" height="300px">
+                                    <h4>Ficus Bonsai</h4>
+                                        <p><del>NPR 1200</del></p>
+                                        <p><span style="color: red;">NPR 880</span></p>
+                                </section>
+                            </th>
+                            <th class="product">
+                                <section>
+                                    <img src="../images/bonsai3.png" alt="Pinus Palviflora" width="300px" height="300px">
+                                    <h4>Pinus Palviflora</h4>
+                                        <p><del>NPR 1200</del></p>
+                                        <p><span style="color: red;"> NPR1000</span></p>
+                                </section>
+                            </th>
+                        </tr>
+                    </table>
+                </section>
+
+
+
+
+<!---------------------Latest Product-------------------->
+                <section>
+                    <h2 class="title"> Latest Products</h2>
+                    <table width="100%">
+                        <tr>
+                            <th class="product">
+                                <section>
+                                        <img src="../images/chinese-elm-bonsai.jpg" alt="chinese-elm" width="300px" height="300px">
+                                        <h4>Chinese-Elm</h4>
+                                        <p><del>NPR 1075</del></p>
+                                        <p><span style="color: red;">NPR 960</span></p>
+                                </section>
+                            </th>
+                            <th class="product">
+                                <section>
+                                    <img src="../images/dwarf-jade-bonsai.jpg" alt="dwarf-jade" width="300px" height="300px">
+                                    <h4>Dwarf-jade</h4>
+                                        <p><del>NPR 1075</del></p>
+                                        <p><span style="color: red;">NPR 980</span></p>
+                                </section>
+                            </th>
+                            <th class="product">
+                                <section>
+                                    <img src="../images/ficus-bonsai.jpg" alt="ficus" width="300px" height="300px">
+                                    <h4>Ficus Bonsai</h4>
+                                        <p><del>NPR 1120</del></p>
+                                        <p><span style="color: red;">NPR 1075</span></p>
+                                </section>
+                            </th>
+                            <th class="product">
+                                <section>
+                                    <img src="../images/juniper-bonsai.jpg" alt="juniper bonsai" width="300px" height="300px">
+                                    <h4>Juniper Bonsai</h4>
+                                        <p><del>NPR 999</del></p>
+                                        <p><span style="color: red;">NPR 880</span></p>
+                                </section>
+                            </th>
+                        </tr>
+                        </table>
+                </section>
+
+                <!--------------------Offer Product---------------------->
+                <section>
+                    <table width="100%" class="offer-section">
+                        <tr>
+                            <th class="offer">
+                                <section>
+                                        <img src="../images/bonsai4.png" alt="winterberry" class="offer-image">
+                                </section>
+                            </th>
+                            <th class="display">
+                                <section>
+                                    <p> Exclusively On Bonsai Boutique..</p>
+                                    <h1>Buxus Bonsai</h1>
+                                    <!-- Small is used to set Font-Size to small -->
+                                    <small>The Buxux Bonsai is a deciduous shrub or small tree<br> with dark green serrated leaves and
+                                         light pink flowers.<br> The female trees bear 
+                                        beautiful red berries which can last until next spring.</small>
+                                </section>
+                                <a href="product.html" class="btn1">Buy Now &#8594</a>
+                            </th>
+                            </tr>
+                            </table>
+                            </section>
+
+
+                            <!------------------ Blog Section ----------------------------->
+                            <div class="Blog">
+                                <div class="Blog-content">
+                                    <div class="Blog-img1">
+                                        <h2 style="color: #555;"> Blog </h2>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="Blogbonsai">
+                                <div class="bg">
+                                    
+                                        <img src="../images/technology1.png" alt="picture of technology">
+                                        <h2> How Technology Has Affected Daily Life And Business</h2>
+                                    
+                                    <p>                                                            
+                                        Technology has revolutionized our lives in countless ways. From the invention of the printing press to the emergence of 
+                                        the internet, technology has had a major impact on how we interact with the world around us.We’ll look at how technology has changed the way we work, live, and play, and how it has opened up new possibilities for communication, education, and entertainment. 
+                                        Technology has both positive and negative aspect in life. </p>
+                                </div>
+                                </div>
+                                <div class="Blogsec">
+                                <div class="blog2">
+                                    <div class="bg2">
+                                        <img src="../images/business.png" alt="picture of business">
+                                        <h2> Business</h2></a>
+                                        <p> Technology has been a major force in transforming our lives for the better. It has allowed us to do things faster, easier, and with much more efficiency than ever before. 
+                                            It has also opened up a world of possibilities for communication, commerce, entertainment, education, and more.Technology has become an integral part of modern life and countless types of technology make our lives easier and more efficient.                                                      
+                                             </p>
+                                            </div>
+                                </div>
+                                
+                                    
+                                        <div class="blog3">
+                                            <div class="bg3">
+                                                <img src="../images/dailylife.png" alt="picture of daily life" style="width: 200px; height :170px">
+                                                <h2> Daily Life</h2></a>
+                                                <p> Technology is advancing at a rapid rate and its effects are felt in virtually every aspect of our lives. From smartphones to voice assistants,
+                                                     from computers to IoT devices, technology is making its presence felt in our daily lives. </p>
+                                            </div>
+                                        </div>
+                                        </div>
+                            <a href="blog.html" class="blogbtn1">Read More &#8594</a>
+
+
+
+
+
+                            
+
+
+                            <!------------------------Footer Section------------------------------>
+                            <div class="footer">
+                                <div class="columnn">
+                                    <div id = "icondiv">
+                                    </div> 
+                                    <div class="footer-title">Connect with US</div>
+                                    <div>
+                                        <a href="https://www.facebook.com/manchester.dhakal.7" title="Facebook"><img src="../icons/fb.png" alt="Facebook logo"></a>
+                                        <a href="https://www.instagram.com/_an_ub_hav/" title="Instagram"><img src="../icons/instagram.png" alt="Instagram logo"></a>
+                                        <a href="https://twitter.com/AnubhavDhakal1"  title="Twitter"><img src="../icons/twitter.png" alt="Twitter logo"></a>
+                                        <a href="https://www.linkedin.com/in/anubhav-dhakal-aa3871246/"  title="Linkedin"><img src="../icons/linkedin.png" alt="Linkedin logo"></a>
+                                    </div>
+                                </div>
+                                <hr style="margin-left:110px;margin-top: -20px;height: 180px;">
+                                <div style="margin-left:100px;align-items: center;text-align: center;margin-top: -30px;">
+                                        <form id = "subscribe" action="">
+                                            <img src="../icons/subscribe.png" style="width:60px;height:60px" alt="Newsletter" title="Subscribe to newsletter">
+                                            <p style="padding:10px">Know about our future products and availability</p>
+                                            <input type="email" placeholder="Enter your email" id = "email" required>
+                                            <button style="cursor:pointer" onclick="return subscribed()">SUBSCRIBE</button>
+                                        </form>
+                                </div>
+                                <hr style="margin-left:100px;margin-top: -20px;height: 180px;";>
+                                <div style="height:150px;display:flex;flex-direction:column ;margin-left: 50px;justify-content: space-between">
+                                        <div style="display:flex;flex-direction: row;">
+                                            <img src="../icons/map.png" style="height:75%;margin-top: 5px;" alt="map">
+                                            <div>
+                                                MaitiDevi <br>
+                                                Kathmandu, Nepal <br>
+                                            </div>
+                                        </div>
+                                        <div style="display:flex;flex-direction: row">
+                                            <img src="../icons/phone-black.png" alt="Phone">
+                                            <div style="margin-top:5px">
+                                                (+977)9848460421
+                                            </div>
+                                        </div>
+                                        <div style="display:flex;flex-direction: row;justify-content: center">
+                                            <img src="../icons/email.png" alt="Mail">
+                                            <div style="margin-top:5px">
+                                                    dhakalanubhav42@gmail.com
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div align="center" style="padding:0px 0px 10px 0px;font-size: 15px;font-family: Poppins-Regular;box-sizing:border-box;background:url(../background-images/white.png)">
+                                    Copyright &copy Bonsai Boutique 2022.  All rights reserved
+                            </div>
+    
+                            
+                            
+
+
+                                <!--Using Java Script for Image Slider and Type Writer-->
+                                <script>
+                                    var images = ['../images/slider1.png', '../images/slider2.png', '../images/slider3.png', '../images/slider4.png'];
+                                
+                                    var x = 0;
+                                    var imgs = document.getElementById('img');
+                                    //The setInterval() calls a function at theintervals (in milliseconds). 
+                                    setInterval(slider, 2000);
+                                
+                                    function slider() {
+                                
+                                      if (x < images.length) 
+                                        {
+                                        x = x + 1;
+                                        } 
+                                
+                                      else 
+                                        {
+                                        x = 1;
+                                        }
+                                
+                                
+                                      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+                                    }
+                                    
+                                    
+                                    //TypeWrite Java Script. 
+                                    
+      var text = ["HOME..."];
+      var i = 0;
+      var j = 0;
+      var cursor = true;
+      function typeWriter() {
+        if (i < text.length) {
+          var currentText = text[i];
+          if (j < currentText.length) {
+            document.getElementById("typewriter").innerHTML += currentText.charAt(j);
+            j++;
+          } else {
+            i++;
+            j = 0;
+            document.getElementById("typewriter").innerHTML = "";
+            setTimeout(typeWriter, 3000); // delay of 2 seconds before typing the next text
+          }
+        } else {
+          i = 0;
+          setTimeout(typeWriter,3000);
+        }
+      }
+      
+      setInterval(typeWriter, 300);
+      
+      setInterval(function(){
+         cursor = !cursor;
+         document.getElementById("cursor").style.visibility = cursor ? "visible" : "hidden";
+      },400);
+                                </script>
+                                <Script src="../java/javas.js"></Script>
+                                                    
+  </body>
+  </html>                          
+                          

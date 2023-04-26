@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Inter, sans-serif;
+	background-color: whitesmoke;
+	color:white;
+  overflow-x: hidden;
+  
+}
+
+
+/* common styles */
+img {
+	width: 100%;
+left:-4rem;
+position: relative;
+}
+
+.description {
+	margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 200;
+	color: #727171
+}
+.title {
+	color: #ff7613;
+	font-weight:300;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+.item_preTitle {
+	font-size: 1rem;
+	color: #727171;
+	font-weight: 300;
+}
+.item_title {
+	font-size: 1.6rem;
+	color: black;
+	font-weight: 500;
+	margin: 0.8rem 0;
+}
+.item_subtitle {
+	font-size: 1.4rem;
+	color: #ff7613;
+	font-weight: 400;
+}
+
+/* layouts */
+.port1 {
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: white;
+	
+}
+.profile {
+	
+	margin-bottom: 2rem;
+}
+.group-1,
+.group-2 {
+	display: flex;
+	flex-direction: column;
+	
+}
+.group-3 {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+  margin-right: 1rem;
+}
+	.group-3 {
+		flex-direction: column;
+	}
+
+/* profile */
+.profile_container {
+	display: flex;
+}
+.profile_Imge {
+	max-width: 250px;
+}
+.profile_firstName {
+	color: black;
+	display: block;
+	margin-bottom: 1rem;
+}
+.profile_lastName {
+	color: #ff7613;
+	display: block;
+}
+.profile_title {
+	font-size: 1.8rem;
+	font-weight: 400;
+  color: black;
+}
+
+/* Expertise */
+.skills_list {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+
+/* eduction */
+.edu_item {
+	margin-top: 2rem;
+}
+
+/* certification */
+.certification_item {
+	margin-top: 2rem;
+}
+/* exp */
+.exp_item {
+	margin-top: 2rem;
+}
+
+/* Interests */
+.interest{
+  position: relative;
+  bottom: 80rem;
+  left: 30rem;
+}
+.interest_items {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.interest_item {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #ff7613
+}
+
+
+
+
+</style>
+
+<body>
+  <div class="port1">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_Imge">
+          <img src="../images/sashank.png" alt="Sashank Acharya">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_firstName">Sashank</span>
+            <span class="profile_lastName" style="color: #ff7613;">Acharya</span>
+          </h1>
+          <p class="profile_title"> deffensive sercurity </p>
+          <p class="description profile_description">
+            I am deffensive-Security exponents who focuses on using my knowledge 
+                        of computer networks and programming Languages to identify and help to solve vulnerabilities in cvertain systems.  This can involve conducting penetration tests which are simulated attacks on a computer system, network, or
+                         web application to evaluate the security of that system.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title" style="color: #ff7613;">Expertise</h3>
+        <ul class="skills_list description" style="color: #727171;">
+          <li>Phython</li>
+          <li>Java</li>
+          <li>Pentest</li>
+          <li>Kali-Linux</li>
+          </ul>
+        </ul>
+      </div>
+      <div class="edu">
+        <h3 class="title" style="color: #ff7613;">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle" style="color: #727171;">2019</p>
+          <h4 class="item_title" style="color: #727171;">SEE</h4>
+          <p class="item_subtitle">
+           <span>Arunima H.S School</span> 
+          </p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle" style="color: #727171;">2021</p>
+          <h4 class="item_title" style="color: #727171;">NEB +2</h4>
+          <p class="item_subtitle">
+            Liverpool International College
+          </p>
+        </div>
+      </div>
+<br>
+<br>
+      <div class="langauge">
+        <h3 class="title" style="color: #ff7613;">Languages</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <ul class="skills_list description" style="color: #727171;">
+              <li>NEPALI</li>
+              <li>ENGLISH</li>
+              <li>HINDI</li>
+              <li>SPANISH</li>
+              </ul>
+            </ul>
+          </div>
+          </div>
+          </div>
+<br>
+<br>
+      <div class="certification">
+        <h3 class="title" style="color: #ff7613;">certification</h3>
+        <div class="certification_item">
+          <p class="item_preTitle">2021</p>
+          <h4 class="item_title">PCEP™ Certified Entry-Level Python Programmer </h4>
+          <p class="description">
+            It is a professional credential that measures the candidate's ability to accomplish coding tasks related to the essentials of programming in the Python language. A test candidate should demonstrate sufficient knowledge of the universal concepts of computer programming, the syntax and semantics of the Python language 
+          </p>
+          <br>
+          <p class="item_preTitle">2022</p>
+          <h4 class="item_title">Cisco Certifications</h4>
+          <p class="description">
+            Cisco has redesigned our training and certification programs to address todays dynamic technologies and prepare students, engineers, and software developers for success in the industrys most critical jobs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title" style="color: #ff7613;">Experience</h3>
+        <div class="exp_item">
+          <p class="item_preTitle">2020 - 2022</p>
+          <h4 class="item_title">FreeLancer</h4>
+          <p class="item_subtitle">Python programmer</p>
+          <p class=" description">
+           I was resposible of work on projects that involve writing, testing, and maintaining code using the Python programming language. Some of the common tasks i had was Writing and testing code for software applications and websites,Writing and testing code for software applications and websites.
+        </div>
+        <br>
+        <div class="exp_item">
+          <p class="item_preTitle">2022-present</p>
+          <h4 class="item_title">FreeLancer</h4>
+          <p class="item_subtitle"> Screener</p>
+          <p class="description">
+           My works was to  observe and inspect flight passengers to ensure safety and security. They make sure passengers comply with the appropriate amount of luggage and materials aboard the flight.
+        </div>
+      </div>
+
+      
+      <div class="interest">
+        <h3 class="title" style="color: #ff7613;">Interest</h3>
+        <ul class="skills_list description" style="color: #727171;">
+          <li>Riding</li>
+          <li>Music</li>
+          <li>Movies</li>
+          <li>Games</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title" style="color: #ff7613;">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+             Kathmandu, Nepal
+          </p>
+          <p class="description">
+            +977 9841511720
+          </p>
+          <p class="description">
+            cool.sashank51@gnail.com
+          </p>
+        </div>
+      </div>
+</body>
+</html>

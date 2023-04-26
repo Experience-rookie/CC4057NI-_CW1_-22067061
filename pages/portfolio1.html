@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Inter, sans-serif;
+	background-color: whitesmoke;
+	color:white;
+  overflow-x: hidden;
+  
+}
+
+
+/* common styles */
+img {
+	width: 100%;
+left:-4rem;
+position: relative;
+}
+
+.description {
+	margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 200;
+	color: #727171
+}
+.title {
+	color: #ff7613;
+	font-weight:300;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+.item_preTitle {
+	font-size: 1rem;
+	color: #727171;
+	font-weight: 300;
+}
+.item_title {
+	font-size: 1.6rem;
+	color: black;
+	font-weight: 500;
+	margin: 0.8rem 0;
+}
+.item_subtitle {
+	font-size: 1.4rem;
+	color: #ff7613;
+	font-weight: 400;
+}
+
+/* layouts */
+.port1 {
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 5rem;
+	background: white;
+	
+}
+.profile {
+	
+	margin-bottom: 2rem;
+}
+.group-1,
+.group-2 {
+	display: flex;
+	flex-direction: column;
+	
+}
+.group-3 {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+  margin-right: 1rem;
+}
+	.group-3 {
+		flex-direction: column;
+	}
+
+/* profile */
+.profile_container {
+	display: flex;
+}
+.profile_Imge {
+	max-width: 250px;
+}
+.profile_firstName {
+	color: black;
+	display: block;
+	margin-bottom: 1rem;
+}
+.profile_lastName {
+	color: #ff7613;
+	display: block;
+}
+.profile_title {
+	font-size: 1.8rem;
+	font-weight: 400;
+  color: black;
+}
+
+/* Expertise */
+.skills_list {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+
+/* eduction */
+.edu_item {
+	margin-top: 2rem;
+}
+
+/* certification */
+.certification_item {
+	margin-top: 2rem;
+}
+/* exp */
+.exp_item {
+	margin-top: 2rem;
+}
+
+/* Interests */
+.interest{
+  position: relative;
+  bottom: 80rem;
+  left: 30rem;
+}
+.interest_items {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.interest_item {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #ff7613
+}
+
+
+
+
+</style>
+
+<body>
+  <div class="port1">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_Imge">
+          <img src="../images/subin.png" alt="Subin Karmacharya">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span class="profile_firstName">Subin</span>
+            <span class="profile_lastName" style="color: #ff7613;">Karmacharya</span>
+          </h1>
+          <p class="profile_title"> Business Intelligence Analyst</p>
+          <p class="description profile_description">
+            This professional is responsible for the collection, analysis, and dissemination of business data to support decision making.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title" style="color: #ff7613;">Expertise</h3>
+        <ul class="skills_list description" style="color: #727171;">
+          <li>Data Management</li>
+          <li>Network and Security</li>
+          <li>Data Analytics</li>
+          <li>E-commerce</li>
+          </ul>
+        </ul>
+      </div>
+      <div class="edu">
+        <h3 class="title" style="color: #ff7613;">Education</h3>
+        <div class="edu_item">
+          <p class="item_preTitle" style="color: #727171;">2020</p>
+          <h4 class="item_title" style="color: #727171;">SEE</h4>
+          <p class="item_subtitle">
+           <span>Constellation High School</span> 
+          </p>
+        </div>
+        <div class="edu_item">
+          <p class="item_preTitle" style="color: #727171;">2022</p>
+          <h4 class="item_title" style="color: #727171;">NEB +2</h4>
+          <p class="item_subtitle">
+            Brihaspati COLLEGE
+          </p>
+        </div>
+      </div>
+<br>
+<br>
+      <div class="langauge">
+        <h3 class="title" style="color: #ff7613;">Languages</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <ul class="skills_list description" style="color: #727171;">
+              <li>NEPALI</li>
+              <li>ENGLISH</li>
+              </ul>
+            </ul>
+          </div>
+          </div>
+          </div>
+<br>
+<br>
+      <div class="certification">
+        <h3 class="title" style="color: #ff7613;">certification</h3>
+        <div class="certification_item">
+          <p class="item_preTitle">2022</p>
+          <h4 class="item_title">Certified in the Governance of Enterprise IT (CGEIT)</h4>
+          <p class="description">
+            This certification, which covers subjects including IT governance principles, IT strategy, IT risk management, and IT value delivery, is intended for IT professionals who are in charge of overseeing enterprise IT.
+          </p>
+          <br>
+          <p class="item_preTitle">2020</p>
+          <h4 class="item_title">Microsoft Certified</h4>
+          <p class="description">
+            Aimed at professionals who deal with the Microsoft Azure cloud computing platform, the Azure Administrator Associate certification covers subjects like deploying and managing virtual machines, storage, and networking.
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title" style="color: #ff7613;">Experience</h3>
+        <div class="exp_item">
+          <p class="item_preTitle">2019 - 2021</p>
+          <h4 class="item_title">FreeLancer</h4>
+          <p class="item_subtitle">IT Support</p>
+          <p class=" description">
+            This involves providing technical support to users of information systems, including troubleshooting hardware and software issues, and assisting with the configuration of computer systems and software.
+          </p>
+        </div>
+        <br>
+        <div class="exp_item">
+          <p class="item_preTitle">2021</p>
+          <h4 class="item_title"></h4>
+          <p class="item_subtitle"> Cybersecurity</p>
+          <p class="description">
+            This involves the protection of sensitive information from unauthorized access and the prevention of cyber-attacks.
+        </div>
+      </div>
+
+      
+      <div class="interest">
+        <h3 class="title" style="color: #ff7613;">Interest</h3>
+        <ul class="skills_list description" style="color: #727171;">
+          <li>Playing music</li>
+          <li>Playing basketball</li>
+          <li>Subnetting</li>
+          <li>Roaming</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title" style="color: #ff7613;">Contact</h3>
+        <div class="contact_info">
+          <p class="description">
+            Kathmandu, Nepal
+          </p>
+          <p class="description">
+            +977 9869420634
+          </p>
+          <p class="description">
+            subinkarmacharya163@gmail.com
+          </p>
+        </div>
+      </div>
+</body>
+</html>

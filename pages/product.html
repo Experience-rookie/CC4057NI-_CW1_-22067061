@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai Products</title>
+    <link rel="stylesheet" href="../css/style.css"> <!--Using external css-->
+    <style>
+        
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        /* css for body*/
+        body {
+            background-color: #ffffff;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif, monospace;
+        }
+/* css for container 1*/
+        .container1 {
+            margin-left: 13%;
+            justify-content: center;
+            margin-top: 7%;
+            margin-bottom: 7%;
+        }
+
+        .pictures1 {
+            background-color: #ffffff82;
+            margin: 10px 20px;
+            padding: 30px;
+            width: 100px 50px;
+            box-sizing: border-box;
+            display: inline-block;
+            justify-content: center;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 1px 1px 6px 1px black ;
+        }
+        /* css to hover picture 1*/
+        .pictures1:hover{
+            border: none;
+            background-color: #2e882a82;
+            box-shadow: -1px -1px 6px 2px #000000d3;
+            text-shadow: 2px 2px #f0f0f0d3;
+            transform: translate3d(-10px,-10px,-10px);
+           
+        }
+/* h2 css */
+        .pictures1 h2 {
+            margin: 0px;
+        }
+
+        .pictures1 p {
+            font-size: 20px;
+        }
+
+
+        .container2 {
+            margin-left: 10%;
+            margin-top: 7%;
+            margin-bottom: 7%;
+            justify-content: center;
+        
+        }
+
+        .pictures {
+            background-color: #ffffff82;
+            margin: 15px 15px;
+            padding: 10px;
+            width: 100px 50px;
+            box-sizing: border-box;
+            display: inline-block;
+            justify-content: center;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 1px 1px 6px 1px black ;
+        }
+        /* hovering picture css*/
+        .pictures:hover{
+            border: none;
+            background-color: #2e882a82;
+            box-shadow: -1px -1px 6px 2px #000000d3;
+            text-shadow: 2px 2px #f0f0f0d3;
+            transform: translate3d(-8px,-8px,-8px);
+           
+        }
+
+        .pictures h2 {
+            margin: 0px;
+        }
+
+        .price{
+            margin: 0px;
+        }
+
+        .pictures p {
+            font-size: 20px;
+        }
+        /* css for button*/
+        .button1 {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            border: 2px solid black;
+            margin-left: 5px;
+            
+        }
+        /* hovering button */
+        .button1:hover {
+            background-color: rgb(81, 226, 100);
+            border: 2px solid white;
+            color: black;
+            transform: translate3d(-3px,-3px,-3px);
+        }
+
+        .button2 {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            border: 2px solid black;
+            margin-left: 5px;
+            
+        }
+        
+        .button2:hover {
+            background-color: rgb(81, 226, 100);
+            border: 2px solid white;
+            color: black;
+            transform: translate3d(-3px,-3px,-3px);
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration-line: underline;   
+        }
+/* cart count css */
+        #cart-count {
+        font-size: 20px;
+        position: relative;
+        right: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/bonsai.png" width="200px">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav> 
+            <img src="../images/cart.png" alt="logo of cart" width="30px" height="30px" style="position: relative; left:
+            50px; bottom: 4px;">
+            <div class="cart-icon">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+
+                      <!----------------- Product display:Latest Product------------->
+    <h1>Latest Products</h1>
+
+    <div class="container1">
+        
+        <section class="pictures1">
+            <img src="../product image/bonsai1.png" alt="Buxus Bonsai">
+            <h2>Buxus Bonsai</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 700</b></del></span> 
+            <b>Rs 660</b></p> 
+            <button class="button1"type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+
+        <section class="pictures1">
+            <img src="../product image/bonsai2.png" alt="Ficus Bonsai">
+            <h2>Ficus Bonsai</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 1200</b></del></span> 
+            <b>Rs 880</b></p> 
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+
+        <section class="pictures1">
+            <img src="../product image/bonsai3.png" alt="Pinus Palviflora">
+            <h2>Pinus Palviflora</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 1200</b></del></span> 
+            <b>Rs 1000</b></p> 
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+    </div>
+
+                              <!-------- Our Products ------------->
+    <h1>Our Products</h1>
+
+    <div class="container2">
+
+        <section class="pictures">
+            <img src="../product image/chinese_elm.jpg" alt="Chinese Elm">
+            <h2>Chinese Elm</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 2000</b></del></span> 
+            <b>Rs 1550</b></p> 
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+
+        <section class="pictures">
+            <img src="../product image/dwarf_jade.jpg" alt="Dwarf Jade">
+            <h2>Dwarf Jade</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 2500</b></del></span>
+            <b>Rs 2000</b></p>   
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+
+        <section class="pictures">
+            <img src="../product image/ficus.jpg" alt="Ficus">
+            <h2>Ficus</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 1500</b></del></span>
+            <b>Rs 1000</b></p>   
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+
+        </section>
+
+        <section class="pictures">
+            <img src="../product image/maple.jpg" alt="Maple">
+            <h2>Maple</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 1800</b></del></span>
+            <b>Rs 1100</b></p>   
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+
+        <section class="pictures">
+            <img src="../product image/juniper.jpg" alt="Juniper">
+            <h2>Juniper</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 1500</b></del></span>
+            <b>Rs 1000</b></p>   
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+
+        <section class="pictures">
+            <img src="../product image/japanese-winterberry.jpg" alt="Japanese Winterberry">
+            <h2>Japanese Winterberry</h2>
+            <p class="price"><span style="color: red;"><del><b>Rs. 2200</b></del></span>
+            <b>Rs 1200</b></p>   
+            <button class="button1" type="button" onclick="alert('Thanks for Buying')">Buy</button>
+            <button class="button2" onclick="alert('Added to cart')">Add to Cart</button> 
+        </section>
+        </div>
+
+                             <!---------------- Footer Section --------->
+        <div class="footer">
+            <div class="columnn">
+                <div id = "icondiv">
+                </div> 
+                <div class="footer-title">Connect with US</div>
+                <div>
+                    <a href="https://www.facebook.com/manchester.dhakal.7" title="Facebook"><img src="../icons/fb.png" alt="Facebook logo"></a>
+                    <a href="https://www.instagram.com/_an_ub_hav/" title="Instagram"><img src="../icons/instagram.png" alt="Instagram logo"></a>
+                    <a href="https://twitter.com/AnubhavDhakal1"  title="Twitter"><img src="../icons/twitter.png" alt="Twitter logo"></a>
+                    <a href="https://www.linkedin.com/in/anubhav-dhakal-aa3871246/"  title="Linkedin"><img src="../icons/linkedin.png" alt="Linkedin logo"></a>
+                </div>
+            </div>
+            <hr style="margin-left:110px;margin-top: -20px;height: 180px;">
+            <div style="margin-left:100px;align-items: center;text-align: center;margin-top: -30px;">
+                    <form id = "subscribe" action="">
+                        <img src="../icons/subscribe.png" style="width:60px;height:60px" alt="Newsletter" title="Subscribe to newsletter">
+                        <p style="padding:10px">Know about our future products and availability</p>
+                        <input type="email" placeholder="Enter your email" id = "email" required>
+                        <button style="cursor:pointer" onclick="return subscribed()">SUBSCRIBE</button>
+                    </form>
+            </div>
+            <hr style="margin-left:100px;margin-top: -20px;height: 180px;";>
+            <div style="height:150px;display:flex;flex-direction:column ;margin-left: 50px;justify-content: space-between">
+                    <div style="display:flex;flex-direction: row;">
+                        <img src="../icons/map.png" style="height:75%;margin-top: 5px;" alt="map">
+                        <div>
+                            MaitiDevi <br>
+                            Kathmandu, Nepal <br>
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-direction: row">
+                        <img src="../icons/phone-black.png" alt="Phone">
+                        <div style="margin-top:5px">
+                            (+977)9848460421
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-direction: row;justify-content: center">
+                        <img src="../icons/email.png" alt="Mail">
+                        <div style="margin-top:5px">
+                                dhakalanubhav42@gmail.com
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div align="center" style="padding:0px 0px 10px 0px;font-size: 15px;font-family: Poppins-Regular;box-sizing:border-box;background:url(../background-images/white.png)">
+                Copyright &copy Bonsai Boutique 2022.  All rights reserved
+        </div>
+
+        <!-- Using Java Script-->
+        <script>
+            const addToCartButtons = document.querySelectorAll(".button2");
+            let cartCount = 0;
+            for (let i = 0; i < addToCartButtons.length; i++) {
+              addToCartButtons[i].addEventListener("click", function() {
+                cartCount++;
+                document.querySelector("#cart-count").innerHTML = cartCount;
+              });
+            }
+        </script>
+        <Script src="../java/javas.js"></Script>
+
+</body>
+</html>
